@@ -5,6 +5,8 @@
  */
 package org.avbravo.mback;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -50,6 +52,13 @@ public final class BackTopComponent extends TopComponent implements ExplorerMana
      String separador = System.getProperty("file.separator");
      String userhome = System.getProperty("user.home");
      String path=userhome+separador;
+private static ExplorerManager em = new ExplorerManager();
+
+       @Override
+    public ExplorerManager getExplorerManager() {
+        return em;
+    }
+
 
 
     public BackTopComponent() {
@@ -180,7 +189,6 @@ public final class BackTopComponent extends TopComponent implements ExplorerMana
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
@@ -370,8 +378,5 @@ if(jTextFieldFolder.getText().equals("")){
         }
     }
 
-    @Override
-    public ExplorerManager getExplorerManager() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 }
