@@ -17,7 +17,7 @@ import org.openide.util.NbBundle;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 import org.openide.util.NbPreferences;
-
+   
 /**
  * Top component which displays something.
  */

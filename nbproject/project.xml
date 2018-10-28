@@ -91,7 +91,9 @@
                     </run-dependency>
                 </dependency>
             </module-dependencies>
-            <public-packages/>
+            <public-packages>
+                <package>org.avbravo.mback</package>
+            </public-packages>
         </data>
     </configuration>
 </project>
