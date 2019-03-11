@@ -1,2 +1,9 @@
-# mback
-plugin para backup y restauracion de bases de datos mongodb
+# jmoordbbackup
+jmoordbbackup
+
+Plugin para NetBeans para realizar Backup/Restore de bases de datos NoSQL
+Soporta:
+MongoDB
+
+SO:
+Linux
