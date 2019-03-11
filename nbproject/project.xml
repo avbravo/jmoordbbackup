@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.apisupport.project</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
-            <code-name-base>org.avbravo.mback</code-name-base>
+            <code-name-base>org.avbravo.jmoordbbackup</code-name-base>
             <standalone/>
             <module-dependencies>
                 <dependency>
@@ -100,7 +100,7 @@
                 </dependency>
             </module-dependencies>
             <public-packages>
-                <package>org.avbravo.mback</package>
+                <package>org.avbravo.jmoordbbackup</package>
             </public-packages>
         </data>
     </configuration>

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 AutoUpdate-Show-In-Client: true
-OpenIDE-Module: org.avbravo.mback
-OpenIDE-Module-Localizing-Bundle: org/avbravo/mback/Bundle.properties
+OpenIDE-Module: org.avbravo.jmoordbbackup
+OpenIDE-Module-Localizing-Bundle: org/avbravo/jmoordbbackup/Bundle.properties
 OpenIDE-Module-Requires: org.openide.windows.WindowManager
-OpenIDE-Module-Specification-Version: 0.3.1
+OpenIDE-Module-Specification-Version: 1.0
 

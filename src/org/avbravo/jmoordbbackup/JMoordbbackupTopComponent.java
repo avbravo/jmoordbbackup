@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.avbravo.mback;
+package org.avbravo.jmoordbbackup;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,6 +11,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JLabel;
+import org.avbravo.jmoordbbackup.Bundle;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
@@ -26,27 +27,27 @@ import org.openide.util.NbPreferences;
  * Top component which displays something.
  */
 @ConvertAsProperties(
-        dtd = "-//org.avbravo.mback//Back//EN",
+        dtd = "-//org.avbravo.jmoordbbackup//Back//EN",
         autostore = false
 )
 @TopComponent.Description(
-        preferredID = "BackTopComponent",
-        iconBase = "org/avbravo/mback/icon/backup.png",
+        preferredID = "JmoordbbackupTopComponent",
+        iconBase = "org/avbravo/jmoordbbackup/icon/backup.png",
         persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
-@ActionID(category = "Window", id = "org.avbravo.mback.BackTopComponent")
+@ActionID(category = "Window", id = "org.avbravo.jmoordbbackup.JmoordbbackupTopComponent")
 @ActionReference(path = "Menu/Window" /*, position = 333 */)
 @TopComponent.OpenActionRegistration(
         displayName = "#CTL_BackAction",
-        preferredID = "BackTopComponent"
+        preferredID = "JmoordbbackupTopComponent"
 )
 @Messages({
-    "CTL_BackAction=Back",
-    "CTL_BackTopComponent=Back Window",
-    "HINT_BackTopComponent=This is a Back window"
+    "CTL_BackAction=Jmoordbbackup",
+    "CTL_JmoordbbackupTopComponent=Jmoordbbackup Window",
+    "HINT_JmoordbbackupTopComponent=This is a Jmoordbbackup window"
 })
-public final class BackTopComponent extends TopComponent implements ExplorerManager.Provider {
+public final class JMoordbbackupTopComponent extends TopComponent implements ExplorerManager.Provider {
 
     NotifyDescriptor nd;
      String separador = System.getProperty("file.separator");
@@ -61,11 +62,11 @@ private static ExplorerManager em = new ExplorerManager();
 
 
 
-    public BackTopComponent() {
+    public JMoordbbackupTopComponent() {
         
         initComponents();
-        setName(Bundle.CTL_BackTopComponent());
-        setToolTipText(Bundle.HINT_BackTopComponent());
+        setName(Bundle.CTL_JmoordbbackupTopComponent());
+        setToolTipText(Bundle.HINT_JmoordbbackupTopComponent());
         jLabelPath.setText(path);
         jTextFieldFolder.setText("Descargas");
 
@@ -95,49 +96,49 @@ private static ExplorerManager em = new ExplorerManager();
         jLabelPath = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel2.text")); // NOI18N
 
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/mback/icon/folder.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel3.text")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbbackup/icon/folder.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel3.text")); // NOI18N
 
-        jTextFieldFolder.setText(org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jTextFieldFolder.text")); // NOI18N
+        jTextFieldFolder.setText(org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jTextFieldFolder.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel1.text")); // NOI18N
 
-        jTextFieldBackup.setText(org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jTextFieldBackup.text")); // NOI18N
+        jTextFieldBackup.setText(org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jTextFieldBackup.text")); // NOI18N
 
-        jButtonRestore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/mback/icon/restore.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonRestore, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jButtonRestore.text")); // NOI18N
-        jButtonRestore.setToolTipText(org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jButtonRestore.toolTipText")); // NOI18N
+        jButtonRestore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbbackup/icon/restore.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonRestore, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jButtonRestore.text")); // NOI18N
+        jButtonRestore.setToolTipText(org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jButtonRestore.toolTipText")); // NOI18N
         jButtonRestore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRestoreActionPerformed(evt);
             }
         });
 
-        jTextFieldDatabase.setText(org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jTextFieldDatabase.text")); // NOI18N
+        jTextFieldDatabase.setText(org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jTextFieldDatabase.text")); // NOI18N
 
-        jButtonBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/mback/icon/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonBackup, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jButtonBackup.text")); // NOI18N
-        jButtonBackup.setToolTipText(org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jButtonBackup.toolTipText")); // NOI18N
+        jButtonBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbbackup/icon/save.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonBackup, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jButtonBackup.text")); // NOI18N
+        jButtonBackup.setToolTipText(org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jButtonBackup.toolTipText")); // NOI18N
         jButtonBackup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBackupActionPerformed(evt);
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/mback/icon/mongodb-icon-32.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel4.text")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbbackup/icon/mongodb-icon-32.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel4.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel5.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel5.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel6, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel6.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel6, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel6.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelPath, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabelPath.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelPath, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabelPath.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(BackTopComponent.class, "BackTopComponent.jLabel7.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(JMoordbbackupTopComponent.class, "JMoordbbackupTopComponent.jLabel7.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -264,7 +265,7 @@ private static ExplorerManager em = new ExplorerManager();
                 return;
             }
            
-            informacion(NbBundle.getMessage(BackTopComponent.class, "backuprealizado") + " " + name);
+            informacion(NbBundle.getMessage(JMoordbbackupTopComponent.class, "backuprealizado") + " " + name);
         } catch (Exception e) {
             error(e.getLocalizedMessage());
         }
@@ -293,9 +294,9 @@ if(jTextFieldFolder.getText().equals("")){
                 return;
             }
             //Guarda la ruta del backup
-            NbPreferences.forModule(BackTopComponent.class).put("pathbackupfolder", jTextFieldDatabase.getText());
+            NbPreferences.forModule(JMoordbbackupTopComponent.class).put("pathbackupfolder", jTextFieldDatabase.getText());
 
-            informacion(NbBundle.getMessage(BackTopComponent.class, "restorerealizado"));
+            informacion(NbBundle.getMessage(JMoordbbackupTopComponent.class, "restorerealizado"));
         } catch (Exception e) {
             error(e.getLocalizedMessage());
         }
